@@ -86,6 +86,11 @@
           <%= f.submit "submit", type: 'button', class: 'btn btn-info' %>
         </div>
       <% end %>
+
+      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+        <%= f.input :caption %>
+        <%= f.submit "add a picture", class: 'btn btn-info' %>
+      <% end %>
         
       </div>
     </div>
