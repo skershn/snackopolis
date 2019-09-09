@@ -88,6 +88,7 @@
       <% end %>
 
       <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+        <%= f.input :photo %>
         <%= f.input :caption %>
         <%= f.submit "add a picture", class: 'btn btn-info' %>
       <% end %>
