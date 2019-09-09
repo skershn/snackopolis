@@ -61,7 +61,7 @@
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+<button type="button" class="btn btn-info btn-lg float-left" data-toggle="modal" data-target="#myModal">
   add a comment
 </button>
 
@@ -87,20 +87,25 @@
         </div>
       <% end %>
 
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">show us what you got!</h4>
+      </div>
       <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-        <%= f.input :photo %>
+      <div class="modal-body">
+        <%= f.input :picture %>
         <%= f.input :caption %>
-        <%= f.submit "add a picture", class: 'btn btn-info' %>
+        <%= f.submit "submit", class: 'btn btn-info' %>
+      </div>
       <% end %>
         
       </div>
     </div>
   </div>
 
-  <h1 class="float-left">Comments</h1>
+  
   <!-- Button trigger modal -->
-  <button type="button" class="btn btn-info btn-lg float-right" data-toggle="modal" data-target="#myModal">
-    add a comment
+  <button type="button" class="btn btn-info btn-lg float-left" data-toggle="modal" data-target="#myModal">
+    add a photo
   </button>
 
   <div class="clear"></div>
@@ -118,6 +123,25 @@
       <% end %>
         <%= comment.message %>
         <small><%= comment.user.email %></small>
+      </blockquote>
+    </div>
+  <% end %>
+</div>
+
+<br />
+
+<h1>pictures</h1>
+
+<div class="row">
+  <% @place.photos.each do |photo| %>
+    <div class="col-12 col-sm-6">
+      <blockquote>
+        <% photo.caption.present? %>
+        
+          <%= image_tag photo.picture.url, :height => "150px" %>
+        
+        <%= comment.message %>
+        <small><%= photo.caption %></small>
       </blockquote>
     </div>
   <% end %>
