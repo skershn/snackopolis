@@ -55,9 +55,10 @@
       <%= link_to 'destroy', place_path(@place), method: :delete, data: {confirm: 'are you sure you want to delete this place?'},class: 'btn btn-danger' %>
     <% end %>
   </div>
+<div class="clear"></div>
 </div>
 
-<div class="clear"></div>
+
 
 
 <!-- Button trigger modal -->
@@ -86,31 +87,43 @@
           <%= f.submit "submit", type: 'button', class: 'btn btn-info' %>
         </div>
       <% end %>
-
-      <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel">show us what you got!</h4>
-      </div>
-      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
-      <div class="modal-body">
-        <%= f.input :picture %>
-        <%= f.input :caption %>
-        <%= f.submit "submit", class: 'btn btn-info' %>
-      </div>
-      <% end %>
         
       </div>
     </div>
   </div>
+  
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-info btn-lg float-left" data-toggle="modal" data-target="#myModal2">
+  add a photo
+</button>
+
+
+<div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="myModalLabel">show us what you got!</h4>
+      </div>
+      <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+        <div class="modal-body">
+          <%= f.input :picture %>
+          <%= f.input :caption %>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
+            <%= f.submit "submit", type: 'button', class: 'btn btn-info' %>
+          </div>
+        </div>
+      <% end %>    
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+
+
 
   
-  <!-- Button trigger modal -->
-  <button type="button" class="btn btn-info btn-lg float-left" data-toggle="modal" data-target="#myModal">
-    add a photo
-  </button>
 
-  <div class="clear"></div>
-
-</div>
+<!-- </div> -->
 
 <h1>comments</h1>
 
@@ -140,7 +153,6 @@
         
           <%= image_tag photo.picture.url, :height => "150px" %>
         
-        <%= comment.message %>
         <small><%= photo.caption %></small>
       </blockquote>
     </div>
