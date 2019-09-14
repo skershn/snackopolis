@@ -62,7 +62,7 @@
 
 
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-info btn-lg float-left" data-toggle="modal" data-target="#myModal">
+<button type="button" class="btn btn-info btn-lg float-right" data-toggle="modal" data-target="#myModal">
   add a comment
 </button>
 
@@ -84,7 +84,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
-          <%= f.submit "submit", type: 'button', class: 'btn btn-info' %>
+          <%= f.submit "submit", type: 'submit', class: 'btn btn-info' %>
         </div>
       <% end %>
         
@@ -93,7 +93,7 @@
   </div>
   
 <!-- Button trigger modal -->
-<button type="button" class="btn btn-info btn-lg float-left" data-toggle="modal" data-target="#myModal2">
+<button type="button" class="btn btn-info btn-lg float-right" data-toggle="modal" data-target="#myModal2">
   add a photo
 </button>
 
@@ -110,7 +110,7 @@
           <%= f.input :caption %>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">close</button>
-            <%= f.submit "submit", type: 'button', class: 'btn btn-info' %>
+            <%= f.submit "submit", type: 'submit', class: 'btn btn-info' %>
           </div>
         </div>
       <% end %>    
@@ -118,6 +118,7 @@
   </div>
   <div class="clear"></div>
 </div>
+<div class="clear"></div>
 
 
 
