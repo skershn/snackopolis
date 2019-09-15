@@ -28,6 +28,7 @@ body {
 .navbar {
   background: image_url('restaurant.png');
   box-shadow: 0px 1px 3px #3b8780;
+  margin-bottom: 0;
 }
 
 .navbar-inverse .navbar-brand {
@@ -103,4 +104,24 @@ h1, h4 {
 
 p {
   font-family: 'comfortaaregular';
+}
+
+.carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a img {
+  max-height: 550px;
+  width: 100%;
+}
+
+.carousel-caption {
+  font-family: 'Pacifico', cursive;
+  font-size: 60px;
+  font-weight: 100;
+  text-shadow: rgba(0,0,0,0.95) 2px 2px;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  position: absolute;
+  left: 0;
+}
+
+.carousel {
+  box-shadow: 0px 3px 8px #3b8780;
 }
