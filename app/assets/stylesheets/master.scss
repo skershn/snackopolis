@@ -41,6 +41,10 @@ body {
   
 }
 
+.icon-bar {
+  background:white !important;
+}
+
 .navbar-collapse.collapse.off {
   display: block!important;
 }
@@ -100,6 +104,11 @@ blockquote p {
 h1, h4 {
   font-family: 'coiny_cyrillicregular';
 
+}
+
+h5 {
+  font-family: 'Pacifico', cursive;
+  font-size: 40px
 }
 
 p {
