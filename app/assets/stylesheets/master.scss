@@ -3,6 +3,8 @@
 @import "font-awesome";
 @import url('https://fonts.googleapis.com/css?family=Concert+One|Fredoka+One|Pacifico&display=swap');
 
+$nomster-teal: #097d7d;
+
 .booyah-box {
   -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
   -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
@@ -42,18 +44,24 @@ body {
 }
 
 .pagination {
-  display: inline-block;
-  
-}
+  display: inline-block;  
+  a, .current, .next_page, .previous_page {
+    background-color: white;
+    padding: 10px;
+    float: left;
+    
+    border-radius: 5px;
+    margin-left: 2px;
+  }
 
-.pagination a.active {
-  background-color: #097d7d;
-  color: white;
-  border-radius: 5px;
-}
+  .current {
+    background-color: $nomster-teal;
+    color: white;
+  }
 
-.pagination a:hover:not(.active) {
-  background-color: #ddd;
+  a:hover:not(.active) {
+    background-color: #ddd;
+  }
 }
 
 .icon-bar {
@@ -134,6 +142,11 @@ p {
   max-height: 500px;
   width: 100%;
 }
+
+/*.carousel-inner > .item > img {
+  width:2048px;
+  height:1536px;
+}*/
 
 .carousel-caption {
   font-family: 'Pacifico', cursive;

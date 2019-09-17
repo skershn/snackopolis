@@ -6,27 +6,27 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
   </ol>
-  <div class="carousel-inner" role="listbox">
+  <div class="carousel-inner">
     <div class="carousel-item active">
-      <%= image_tag 'slider1.png', class: 'd-block img-fluid' %>
+      <%= image_tag 'slider1test.jpg', class: 'd-block w-100' %>
       <div class="carousel-caption d-none d-md-block">
         <h3>find the best sandwich places</h3>
       </div>
     </div>
     <div class="carousel-item">
-      <%= image_tag 'slider2.png', class: 'd-block img-fluid' %>
+      <%= image_tag 'slider2test.jpg', class: 'd-block w-100' %>
       <div class="carousel-caption d-none d-md-block">
         <h3>quench your thirst</h3>
       </div>
     </div>
     <div class="carousel-item">
-      <%= image_tag 'slider3.png', class: 'd-block img-fluid' %>
+      <%= image_tag 'slider3.jpg', class: 'd-block w-100' %>
       <div class="carousel-caption d-none d-md-block">
         <h3>looking for hotdogs? you're one click away.</h3>
       </div>
     </div>
     <div class="carousel-item">
-      <%= image_tag 'slider4.png', class: 'd-block img-fluid' %>
+      <%= image_tag 'slider4.jpg', class: 'd-block w-100' %>
       <div class="carousel-caption d-none d-md-block">
         <h3>is it technically a sandwich? maybe.</h3>
       </div>
@@ -68,5 +68,5 @@
 
 <% end %>
 
-<%= will_paginate @places %>
+<%= will_paginate @places %><br />
 
